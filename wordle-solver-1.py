@@ -24,8 +24,8 @@ ranks = {
 for word in words:
 	score = 0
 	# there's a couple ways to approach this, take your pick and experiment with results
-	#check = ''.join(set(word))  # unique letters per word   (rational: "how many words have this letter?")
-	check = word                # all letters in dictionary (rational: "how many times does this letter appear in the dictionary?")
+	#check = ''.join(set(word))  # unique letters per word   (rationale: "how many words have this letter?")
+	check = word                # all letters in dictionary (rationale: "how many times does this letter appear in the dictionary?")
 	for x in range(0, len(check)):
 		letters[check[x]] += 1
 letters_sorted = {k: v for k, v in sorted(letters.items(), key=lambda item: item[1], reverse=True)}
@@ -48,7 +48,7 @@ words_scored = {}
 for word in words:
 	score = 0
 	# score unique letters in words
-	# rational: the more duplicate letters in a word the lower this word falls in rank.
+	# rationale: the more duplicate letters in a word the lower this word falls in rank.
 	#           we want to try the most number of unique letters per guess.
 	check = ''.join(set(word))
 	for x in range(0,len(check)):
