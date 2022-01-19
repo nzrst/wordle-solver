@@ -91,7 +91,7 @@ def MakeGuess(green, yellow, black):
 		stages = {'green':False, 'black':False, 'yellow':False}
 		
 		# first the easiest, match on known-good guesses, green letters
-		m1 = [False, False, False, False, False]
+		m1 = [False] * wordlen
 		for x in range(0, wordlen):
 			m1[x] = True if green[x] == ' ' else False
 			if m1[x] == False and word[x] == green[x]:
