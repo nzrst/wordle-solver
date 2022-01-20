@@ -1,3 +1,4 @@
+```
 # wordle-solver
 
 Provided are two scripts for solving wordle.
@@ -52,3 +53,4 @@ MakeGuess(
 {'robot': 48}
 
 ## 4. Only a single match, so fourth guess "robot", success!
+```
