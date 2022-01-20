@@ -5,6 +5,10 @@ Provided are two scripts for solving wordle.
 The first script builds statistics of letters across the entire word.
 The second script builds statistics of letters in specific slots.
 
+The results of the statistics are dependant on the dictionary used, not all wordle
+clones use the same dictionaries! Each script has more detailed instructions
+and comments through out.
+
 Run the whole script as-is:
 	python3 wordle-solver-1.py
 
