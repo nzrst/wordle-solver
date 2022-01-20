@@ -5,6 +5,9 @@ Provided are two scripts for solving wordle.
 The first script builds statistics of letters across the entire word.
 The second script builds statistics of letters in specific slots.
 
+Run the whole script as-is:
+	python3 wordle-solver-1.py
+
 Regarding how to use the script, below is a quick and dirty step-by-step for how
 to update the game state in the MakeGuess function from start to completion.
 
