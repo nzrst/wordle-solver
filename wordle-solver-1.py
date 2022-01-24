@@ -105,8 +105,21 @@ def MakeGuess(green, yellow, black):
 			if black == '':
 				stages['black'] = True
 			else:
+				# edge cases/overrides;
+				wordx = list(word)
+				for x in range(0, wordlen):
+					# green letters per-slot override the filter
+					if green[x] in black:
+						wordx[x] = ' '
+					# yellow letters in all slots override the filter
+					yset = set(''.join(yellow))
+					if word[x] in yset:
+						for i in range(0, wordlen):
+							if wordx[i] == word[x]:
+								wordx[i] = ' '
+				# once green and yellow exclusions are accounted for apply filter
 				for x in range(0, len(black)):
-					if black[x] not in word:
+					if black[x] not in wordx:
 						m2[x] = True
 				if all(m2):
 					stages['black'] = True
@@ -156,6 +169,7 @@ def MakeGuess(green, yellow, black):
 #   1. if you have multiple guesses per slot add them together;  'abc','yz',...
 #   2. if you have the same yellow letter in multiple slots, just add them in each slot as needed; 'a','a',...
 #   3. if you have no entry for the yellow enter it as a space; ' '
+# ** the presence of a letter in yellow and green groups overrides that same letter in the black group
 
 # as you progress through the challenge add/update the state of the game below and run the function again
 # you'll get multiple words in response, choose one with the highest score and keep on going
