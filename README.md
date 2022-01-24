@@ -5,9 +5,17 @@ Provided are two scripts for solving wordle.
 The first script builds statistics of letters across the entire word.
 The second script builds statistics of letters in specific slots.
 
+
 The results of the statistics are dependant on the dictionary used, not all wordle
 clones use the same dictionaries! Each script has more detailed instructions
 and comments through out.
+
+Two dictionaries are provided:
+1. dictionary-wordle.json
+	- Includes plural form of 4 letter words, names, and many non-dictionary terms from the wordle game
+2. dictionary-wordle-short.json
+	- Set of real 5 letter words only from the wordle game
+
 
 Run the whole script as-is:
 	python3 wordle-solver-1.py
